@@ -1,0 +1,19 @@
+.principal{
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin:0% 5% 0% 5%;
+    padding: 2%;
+    border: solid palevioletred;
+    background-color: white;
+}
+h2{
+    text-align: center;
+}
+.body{
+    background-color: pink;
+}
+.form-control{
+    border:2px solid palevioletred ;
+}
+p{
+    color: red;
+}

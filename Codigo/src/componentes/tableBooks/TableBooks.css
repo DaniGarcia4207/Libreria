@@ -1,0 +1,25 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 20px;
+    margin-top: 6%;
+    width: 100%; 
+}
+
+.table {
+    width: 90%; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.btn {
+    float: left;
+    margin-left: 8%;
+    margin-top: 1%; 
+}
+
+h2{
+    text-align: center;
+    padding-top: 3%;
+}
