@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap'; // Si usas react-bootstrap
+import { Modal, Button } from 'react-bootstrap';
+import Swal from 'sweetalert2'
 
 export default function Delete({ show, handleClose, bookId}) {
     let URL = process.env.REACT_APP_ENVIRONMENT
@@ -9,8 +10,12 @@ export default function Delete({ show, handleClose, bookId}) {
                 method: 'DELETE',
             });
             if (response.ok) {
-                alert('Libro eliminado exitosamente');
+                Swal.fire({
+                    title: "Libro eliminado exitosamente",
+                    icon: "success",
+                });
                 handleClose();
+                window.location.reload()
             } else {
                 alert('Error al eliminar el libro');
             }
@@ -31,7 +36,7 @@ export default function Delete({ show, handleClose, bookId}) {
                 <Button variant="secondary" onClick={handleClose}>
                     Cerrar
                 </Button>
-                <Button variant="primary" onClick={handleDelete }>
+                <Button variant="primary" onClick={handleDelete}>
                     Aceptar
                 </Button>
             </Modal.Footer>

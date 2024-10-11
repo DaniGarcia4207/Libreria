@@ -23,7 +23,16 @@ const controller = {
                 throw new Error("Formato de datos incorrecto recibido desde JSONBin");
             }
     
-            let id = result.data.record.length + 1;
+            let id = 0;
+            let libros = result.data.record
+            if (Array.isArray(libros) && libros.length > 0) {
+            const ultimoLibro = libros[libros.length - 1];
+            const idUltimoLibro = ultimoLibro.id;
+            id = idUltimoLibro + 1
+            } else {
+            console.error("No se encontró la lista de libros o está vacía.");
+            id = 1
+            }
     
             const newBook = {
                 id: id,

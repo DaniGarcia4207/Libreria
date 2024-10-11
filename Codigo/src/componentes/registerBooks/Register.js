@@ -59,6 +59,7 @@ export default function Registro({ show, handleClose}) {
                         icon: "success",
                     });
                     form.current.reset()
+                    window.location.reload()
 
                 }
                 if (response.status === 400) {

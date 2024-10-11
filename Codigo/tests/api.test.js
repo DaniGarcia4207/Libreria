@@ -21,7 +21,7 @@ describe('Books API', () => {
             const response = await request(app)
                 .post('/registro-libro')
                 .send({
-                    title:'hola',
+                    //falta title 
                     author: 'Antoine de Saint-Exupéry',
                     yearPublished: 1943,
                     genre: 'Ficción'

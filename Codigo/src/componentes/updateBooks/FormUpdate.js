@@ -70,8 +70,9 @@ export default function Update({ show, handleClose, book }) {
                         title: "Libro actualizado con éxito",
                         icon: "success",
                     });
-                    form.current.reset(); // Opcional: reinicia el formulario
-                    handleClose(); // Cerrar el modal después de la actualización
+                    form.current.reset();
+                    handleClose();
+                    window.location.reload()
                 }
                 if (response.status === 400) {
                     Swal.fire({
